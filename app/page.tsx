@@ -32,42 +32,42 @@ export default function Home() {
                         items: [{price: 550}]
                       },
                       {
-                        id: 1,
+                        id: 2,
                         name: 'Песто',
                         imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
                         price: 550,
                         items: [{price: 550}]
                       },
                       {
-                        id: 1,
+                        id: 3,
                         name: 'Песто',
                         imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
                         price: 550,
                         items: [{price: 550}]
                       },
                       {
-                        id: 1,
+                        id: 4,
                         name: 'Песто',
                         imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
                         price: 550,
                         items: [{price: 550}]
                       },
                       {
-                        id: 1,
+                        id: 5,
                         name: 'Песто',
                         imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
                         price: 550,
                         items: [{price: 550}]
                       },
                       {
-                        id: 1,
+                        id: 6,
                         name: 'Песто',
                         imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
                         price: 550,
                         items: [{price: 550}]
                       },
                       {
-                        id: 1,
+                        id: 7,
                         name: 'Песто',
                         imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
                         price: 550,
@@ -88,42 +88,42 @@ export default function Home() {
                         items: [{price: 550}]
                       },
                       {
-                        id: 1,
+                        id: 2,
                         name: 'Песто',
                         imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
                         price: 550,
                         items: [{price: 550}]
                       },
                       {
-                        id: 1,
+                        id: 3,
                         name: 'Песто',
                         imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
                         price: 550,
                         items: [{price: 550}]
                       },
                       {
-                        id: 1,
+                        id: 4,
                         name: 'Песто',
                         imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
                         price: 550,
                         items: [{price: 550}]
                       },
                       {
-                        id: 1,
+                        id: 5,
                         name: 'Песто',
                         imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
                         price: 550,
                         items: [{price: 550}]
                       },
                       {
-                        id: 1,
+                        id: 6,
                         name: 'Песто',
                         imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
                         price: 550,
                         items: [{price: 550}]
                       },
                       {
-                        id: 1,
+                        id: 7,
                         name: 'Песто',
                         imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
                         price: 550,
