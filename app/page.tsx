@@ -7,6 +7,7 @@ export default function Home() {
         <Container className='mt-10'>
           <Title text='Все пиццы' size='lg' className='font-extrabold'/>
         </Container>
+
         <TopBar/>
 
         <Container className='mt-10 pb-14'>
@@ -301,7 +302,6 @@ export default function Home() {
                 />
               </div>
             </div>
-
           </div>
         </Container>
       </>
