@@ -13,12 +13,12 @@ export default function Home() {
         <Container className='mt-10 pb-14'>
           <div className='flex gap-20'>
 
-            {/* Фильтрация на странице */}
+            {/* Filters */}
             <div className='w-[250px]'>
               <Filters/>
             </div>
 
-            {/* Список товаров */}
+            {/* Products List */}
             <div className='flex-1'>
               <div className='flex flex-col gap-16'>
                 <ProductsGroupList
