@@ -22,5 +22,5 @@ export const useFilterIngredients = () => {
     }
 
     fetchIngredients()
-  }, [setIngredients]);
+  }, [setIngredients, setLoading]);
 }
