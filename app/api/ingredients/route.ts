@@ -7,6 +7,6 @@ export async function GET() {
 
     return NextResponse.json(ingredients);
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }

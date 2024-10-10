@@ -14,7 +14,7 @@ export const useCategories = () => {
         setCategories(response);
         setLoading(false)
       } catch (err) {
-        console.log(err);
+        console.error(err);
         setLoading(false)
       } finally {
         setLoading(false)

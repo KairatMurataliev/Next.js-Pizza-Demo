@@ -9,25 +9,34 @@ type Item = FilterCheckboxProps;
 
 interface Props {
   title: string;
-  loading: boolean;
   items: Item[];
-  defaultItems: Item[];
+  defaultItems?: Item[];
   limit?: number;
+  loading?: boolean;
   searchInputPlaceholder?: string;
-  onClickCheckbox?: (id: string) => void;
+  onClickCheckbox?: (ids: string[]) => void;
   defaultValue?: string[];
+  selected?: string[];
   className?: string;
   name?: string;
-  ingredientsIds: string[];
 }
 
-export const CheckboxFiltersGroup: React.FC<Props> = ({className, title, loading, items, defaultItems, limit = 5, searchInputPlaceholder = 'Поиск...', onClickCheckbox, defaultValue, ingredientsIds}) => {
+export const CheckboxFiltersGroup: React.FC<Props> = ({title,
+                                                        items,
+                                                        defaultItems,
+                                                        limit = 5,
+                                                        searchInputPlaceholder = 'Поиск...',
+                                                        className,
+                                                        loading,
+                                                        onClickCheckbox,
+                                                        selected,
+                                                        name,}) => {
   const [showAll, setShowAll] = useState(false);
   const [searchValue, setSearchValue] = useState('');
 
-  const listIngredients = showAll
+  const listItemsCheckboxes = showAll
       ? items.filter(item => item.text.toLowerCase().includes(searchValue.toLowerCase()))
-      : defaultItems?.slice(0, limit)
+      : (defaultItems || items)?.slice(0, limit)
 
   const onChangeSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value)
@@ -68,16 +77,16 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({className, title, loading
           )}
 
           <div className='flex flex-col gap-4 max-h-96 pr-2 overflow-auto scrollbar'>
-            {listIngredients.map((item, index) => {
+            {listItemsCheckboxes?.map((item, index) => {
               return (
                   <FilterCheckbox
                       key={index}
                       text={item.text}
                       value={item.value}
-                      name={item.text}
                       endAdornment={item.endAdornment}
-                      checked={ingredientsIds.includes(item.value)}
-                      onCheckedChange={() => onClickCheckbox?.(item.value)}
+                      checked={selected?.includes(item.value)}
+                      onCheckedChange={() => onClickCheckbox?.([item.value])}
+                      name={name}
                   />
               )
             })}

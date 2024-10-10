@@ -6,7 +6,7 @@ export async function GET() {
     const categories = await prisma.category.findMany();
     return NextResponse.json(categories)
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 
@@ -19,6 +19,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(newCategory)
 
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }

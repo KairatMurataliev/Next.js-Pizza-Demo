@@ -7,7 +7,7 @@ export async function GET() {
 
     return NextResponse.json(users);
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 
@@ -19,6 +19,6 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(user);
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }

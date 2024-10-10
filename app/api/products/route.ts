@@ -1,5 +1,7 @@
 import {NextRequest, NextResponse} from "next/server";
 import {prisma} from "@/prisma/prisma-client";
+import {getSortedProducts} from "@/app/api/utils";
+import {PopulatedProduct} from "@/app/api/types";
 
 export async function POST(req: NextRequest) {
   try {
@@ -9,14 +11,30 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(newProduct)
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 
 export async function GET(req: NextRequest) {
   try {
+    const query = req.nextUrl.searchParams.get('query') || ''
+    const filters = query ? JSON.parse(query) : null;
 
+    if (filters) {
+      const where = {}
+      const filtersProducts: PopulatedProduct[] = await prisma.product
+          .findMany({
+            where,
+            include: { category: true }
+          });
+
+      return NextResponse.json(getSortedProducts(filtersProducts))
+    }
+
+    const allProducts: PopulatedProduct[] = await prisma.product.findMany({ include: { category: true } });
+
+    return NextResponse.json(getSortedProducts(allProducts))
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
