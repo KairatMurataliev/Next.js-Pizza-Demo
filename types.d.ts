@@ -23,6 +23,8 @@ export type ProductFilters = {
   pizzaType: string[];
 }
 
-export type OneProduct = {
-
+export type Variant = {
+  name: string;
+  value: string;
+  disabled?: boolean
 }

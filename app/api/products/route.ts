@@ -39,7 +39,6 @@ export async function GET(req: NextRequest) {
     }
 
     const allProducts: PopulatedProduct[] = await prisma.product.findMany({ include: { category: true, items: true, ingredients: true } });
-    console.log(allProducts);
     return NextResponse.json(getSortedProducts(allProducts))
   } catch (err) {
     console.error(err);

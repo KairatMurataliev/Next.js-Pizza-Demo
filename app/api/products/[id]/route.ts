@@ -1,13 +1,13 @@
 import {NextRequest, NextResponse} from "next/server";
 import {prisma} from "@/prisma/prisma-client";
 
-export async function GET(req: NextRequest, context: {params: {id: string}}) {
+export async function GET(req: NextRequest, context: { params: { id: string } }) {
   try {
     const { id } = context.params;
 
     const product = await prisma.product
-        .findUnique({
-          where: { id: parseInt(id) },
+        .findFirst({
+          where: { id: Number(id) },
           include: { items: true, ingredients: true }
         })
 

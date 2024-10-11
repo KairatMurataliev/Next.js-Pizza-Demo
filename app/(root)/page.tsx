@@ -10,7 +10,7 @@ import {useCategories} from "@/hooks /useCategories";
 export default function Home() {
   const sortedList = useProductsStore(state => state.products);
   const categories = useCategoriesStore(state => state.categories)
-  const loadingProducts = useProductsStore(state => state.loading);
+  // const loadingProducts = useProductsStore(state => state.loading);
   const loadingCategories = useCategoriesStore(state => state.loading);
 
   useProducts();

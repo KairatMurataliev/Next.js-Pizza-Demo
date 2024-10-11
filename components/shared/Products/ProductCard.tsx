@@ -15,7 +15,7 @@ export interface ProductProps {
 export const ProductCard: React.FC<ProductProps> = ({className, imageUrl, name, price, id}) => {
     return (
         <div className={className}>
-          <Link href={`/product/${id}`} className='flex-1 flex flex-col'>
+          <Link href={`/products/${id}`} className='flex-1 flex flex-col'>
             <div className='flex justify-center p-6 bg-secondary rounded-lg h-[260px]'>
               <img src={imageUrl} alt={name} className='w-[215px] h-[215px]'/>
             </div>
