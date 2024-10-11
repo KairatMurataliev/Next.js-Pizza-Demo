@@ -87,37 +87,37 @@ export const Filters: React.FC<Props> = ({className}) => {
 
   return (
         <div className={className}>
-          <Title text='Фильтрация' size='sm' className='mb-5 font-bold'/>
+          <Title text='Filters' size='sm' className='mb-5 font-bold'/>
 
           <div className='flex flex-col gap-4'>
             <CheckboxFiltersGroup
-                title="Тип теста"
+                title="Dough type"
                 name="pizzaTypes"
                 className="mb-5"
                 onClickCheckbox={onTypeChange}
                 selected={pizzaType}
                 items={[
-                  { text: 'Тонкое', value: '1' },
-                  { text: 'Традиционное', value: '2' },
+                  { text: 'Thin', value: '1' },
+                  { text: 'Traditional', value: '2' },
                 ]}
             />
 
             <CheckboxFiltersGroup
-                title="Размеры"
+                title="Size"
                 name="sizes"
                 className="mb-5"
                 onClickCheckbox={onSizesChange}
                 selected={size}
                 items={[
-                  { text: '20 см', value: '20' },
-                  { text: '30 см', value: '30' },
-                  { text: '40 см', value: '40' },
+                  { text: '20 sm', value: '20' },
+                  { text: '30 sm', value: '30' },
+                  { text: '40 sm', value: '40' },
                 ]}
             />
           </div>
 
           <div className='border-y mt-5 border-y-neutral-100 py-6 pb-7'>
-            <p className='font-bold mb-3'>Цена от и до:</p>
+            <p className='font-bold mb-3'>Price:</p>
 
             <div className='flex gap-3 mb-5'>
               <Input
@@ -150,7 +150,7 @@ export const Filters: React.FC<Props> = ({className}) => {
           </div>
 
           <CheckboxFiltersGroup
-              title="Ингредиенты"
+              title="Ingredients"
               name="ingredients"
               className="mt-5"
               limit={6}

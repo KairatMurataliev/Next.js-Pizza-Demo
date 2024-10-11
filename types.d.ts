@@ -1,4 +1,4 @@
-import {Product} from "@prisma/client";
+import {Product, ProductItem} from "@prisma/client";
 
 export type SearchProducts = {
   products: Product[]
@@ -8,6 +8,7 @@ export type SortedByCategoryProducts = {
   categoryId: number;
   products: Product[];
   title: string;
+  items: ProductItem[]
 }
 
 export type StatePriceFilter = {
@@ -20,4 +21,8 @@ export type ProductFilters = {
   ingredients: string[];
   size: string[];
   pizzaType: string[];
+}
+
+export type OneProduct = {
+
 }

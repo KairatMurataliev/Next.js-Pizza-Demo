@@ -4,19 +4,25 @@ import {Container, Filters, Title, ProductsGroupList} from "@/components/shared"
 import {TopBar} from "@/components/shared/TopBar";
 import {useProducts} from "@/hooks /useProducts";
 import {useProductsStore} from "@/store/reducers/products";
+import {useCategoriesStore} from "@/store/reducers/category";
+import {useCategories} from "@/hooks /useCategories";
 
 export default function Home() {
   const sortedList = useProductsStore(state => state.products);
-  const loading = useProductsStore(state => state.loading);
+  const categories = useCategoriesStore(state => state.categories)
+  const loadingProducts = useProductsStore(state => state.loading);
+  const loadingCategories = useCategoriesStore(state => state.loading);
+
   useProducts();
+  useCategories();
 
   return (
       <>
         <Container className='mt-10'>
-          <Title text='Все пиццы' size='lg' className='font-extrabold'/>
+          <Title text='All pizzas' size='lg' className='font-extrabold'/>
         </Container>
 
-        <TopBar/>
+        <TopBar categories={categories} loading={loadingCategories}/>
 
         <Container className='mt-10 pb-14'>
           <div className='flex gap-20'>

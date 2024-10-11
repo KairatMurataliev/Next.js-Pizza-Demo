@@ -1,21 +1,18 @@
-'use client';
-
 import React from 'react';
 import {useCategoriesStore} from "@/store/reducers/category";
-import {useCategories} from "@/hooks /useCategories";
 import {Skeleton} from "@/components/ui";
 import {cn} from "@/lib/utils";
 import {Title} from "@/components/shared/Title";
+import {Category} from "@prisma/client";
 
 interface Props {
     className?: string;
+    loading: boolean;
+    categories: Category[];
 }
 
-export const Categories: React.FC<Props> = ({className}) => {
+export const Categories: React.FC<Props> = ({className, loading, categories}) => {
     const activeCategoryId = useCategoriesStore(state => state.activeId)
-    const loading = useCategoriesStore(state => state.loading)
-    const categories = useCategoriesStore(state => state.categories)
-    useCategories();
 
     if (loading) {
         return (

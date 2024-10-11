@@ -1,98 +1,98 @@
 export const _categories = [
-  {name: 'Пиццы'},
-  {name: 'Завтрак'},
-  {name: 'Закуски'},
-  {name: 'Коктейли'},
-  {name: 'Напитки'},
+  {name: 'Pizzas'},
+  {name: 'Breakfasts'},
+  {name: 'Snacks'},
+  {name: 'Cocktails'},
+  {name: 'Drinks'},
 ]
 
 export const _ingredients = [
   {
-    name: 'Сырный бортик',
+    name: 'Cheese rim',
     price: 179,
     imageUrl:
         'https://cdn.dodostatic.net/static/Img/Ingredients/99f5cb91225b4875bd06a26d2e842106.png',
   },
   {
-    name: 'Сливочная моцарелла',
+    name: 'Creamy mozzarella',
     price: 79,
     imageUrl:
         'https://cdn.dodostatic.net/static/Img/Ingredients/cdea869ef287426386ed634e6099a5ba.png',
   },
   {
-    name: 'Сыры чеддер и пармезан',
+    name: 'Cheddar and Parmesan',
     price: 79,
     imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA69C1FE796',
   },
   {
-    name: 'Острый перец халапеньо',
+    name: 'Hot Jalapeno Pepper',
     price: 59,
     imageUrl:
         'https://cdn.dodostatic.net/static/Img/Ingredients/11ee95b6bfdf98fb88a113db92d7b3df.png',
   },
   {
-    name: 'Нежный цыпленок',
+    name: 'Tender Chicken',
     price: 79,
     imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5B328D35A',
   },
   {
-    name: 'Шампиньоны',
+    name: 'Champignons',
     price: 59,
     imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA67259A324',
   },
   {
-    name: 'Ветчина',
+    name: 'Ham',
     price: 79,
     imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA61B9A8D61',
   },
   {
-    name: 'Пикантная пепперони',
+    name: 'Spicy pepperoni',
     price: 79,
     imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA6258199C3',
   },
   {
-    name: 'Острая чоризо',
+    name: 'Spicy Chorizo',
     price: 79,
     imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA62D5D6027',
   },
   {
-    name: 'Маринованные огурчики',
+    name: 'Pickled cucumbers',
     price: 59,
     imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A21DA51A81211E9EA89958D782B',
   },
   {
-    name: 'Свежие томаты',
+    name: 'Fresh tomatoes',
     price: 59,
     imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA7AC1A1D67',
   },
   {
-    name: 'Красный лук',
+    name: 'Red onion',
     price: 59,
     imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA60AE6464C',
   },
   {
-    name: 'Сочные ананасы',
+    name: 'Juicy pineapples',
     price: 59,
     imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A21DA51A81211E9AFA6795BA2A0',
   },
   {
-    name: 'Итальянские травы',
+    name: 'Italian spices',
     price: 39,
     imageUrl:
         'https://cdn.dodostatic.net/static/Img/Ingredients/370dac9ed21e4bffaf9bc2618d258734.png',
   },
   {
-    name: 'Сладкий перец',
+    name: 'Sweet pepper',
     price: 59,
     imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA63F774C1B',
   },
   {
-    name: 'Кубики брынзы',
+    name: 'Cubes of feta cheese',
     price: 79,
     imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA6B0FFC349',
   },
   {
-    name: 'Митболы',
+    name: 'Meatballs',
     price: 79,
     imageUrl:
         'https://cdn.dodostatic.net/static/Img/Ingredients/b2f3a5d5afe44516a93cfc0d2ee60088.png',
@@ -101,129 +101,83 @@ export const _ingredients = [
 
 export const _products = [
   {
-    name: 'Омлет с ветчиной и грибами',
+    name: 'Omelette with ham and mushrooms',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE7970321044479C1D1085457A36EB.webp',
     categoryId: 2,
   },
   {
-    name: 'Омлет с пепперони',
+    name: 'Omelette with pepperoni',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE94ECF33B0C46BA410DEC1B1DD6F8.webp',
     categoryId: 2,
   },
   {
-    name: 'Дэнвич ветчина и сыр',
+    name: 'Danwich ham and cheese',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE796FF0059B799A17F57A9E64C725.webp',
     categoryId: 3,
   },
   {
-    name: 'Куриные наггетсы',
+    name: 'Chicken Nuggets',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE7D618B5C7EC29350069AE9532C6E.webp',
     categoryId: 3,
   },
   {
-    name: 'Картофель из печи с соусом 🌱',
+    name: 'Oven baked potatoes with sauce 🌱',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EED646A9CD324C962C6BEA78124F19.webp',
     categoryId: 3,
   },
   {
-    name: 'Додстер',
+    name: 'Dodster',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE796F96D11392A2F6DD73599921B9.webp',
     categoryId: 3,
   },
   {
-    name: 'Острый Додстер 🌶️🌶️',
+    name: 'Spicy Dodster 🌶️🌶️',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE796FD3B594068F7A752DF8161D04.webp',
     categoryId: 3,
   },
   {
-    name: 'Банановый молочный коктейль',
+    name: 'Banana Milkshake',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EEE20B8772A72A9B60CFB20012C185.webp',
     categoryId: 4,
   },
   {
-    name: 'Карамельное яблоко молочный коктейль',
+    name: 'Caramel Apple Milkshake',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE79702E2A22E693D96133906FB1B8.webp',
     categoryId: 4,
   },
   {
-    name: 'Молочный коктейль с печеньем Орео',
+    name: 'Oreo Cookie Milkshake',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE796FA1F50F8F8111A399E4C1A1E3.webp',
     categoryId: 4,
   },
   {
-    name: 'Классический молочный коктейль 👶',
+    name: 'Classic Milkshake 👶',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE796F93FB126693F96CB1D3E403FB.webp',
     categoryId: 4,
   },
   {
-    name: 'Ирландский Капучино',
+    name: 'Irish Cappuccino',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE7D61999EBDA59C10E216430A6093.webp',
     categoryId: 5,
   },
   {
-    name: 'Кофе Карамельный капучино',
+    name: 'Coffee Caramel Cappuccino',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE7D61AED6B6D4BFDAD4E58D76CF56.webp',
     categoryId: 5,
   },
   {
-    name: 'Кофе Кокосовый латте',
+    name: 'Coffee Coconut Latte',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE7D61B19FA07090EE88B0ED347F42.webp',
     categoryId: 5,
   },
   {
-    name: 'Кофе Американо',
+    name: 'Americano coffee',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE7D61B044583596548A59078BBD33.webp',
     categoryId: 5,
   },
   {
-    name: 'Кофе Латте',
+    name: 'Coffee Latte',
     imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE7D61B0C26A3F85D97A78FEEE00AD.webp',
     categoryId: 5,
   },
 ];
-
-export const _pizzas = [
-  {
-    name: 'Мясная с аджикой',
-    imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF6612D8805B8FA33D45115AFF17C7.avif',
-    categoryId: 1,
-    ingredients: {
-      connect: _ingredients.slice(0, 5)
-    }
-  },{
-    name: 'Креветки со сладким чили',
-    imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF33DC750FF17794FB1ACA35F22A6E.avif',
-    categoryId: 1,
-    ingredients: {
-      connect: _ingredients.slice(0, 5)
-    }
-  },{
-    name: 'Сырная',
-    imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D600BC7B9F1B6888AF021E5C198.avif',
-    categoryId: 1,
-    ingredients: {
-      connect: _ingredients.slice(0, 5)
-    }
-  },{
-    name: 'Двойной цыпленок',
-    imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D601DD7A15C85B8F38026F12402.avif',
-    categoryId: 1,
-    ingredients: {
-      connect: _ingredients.slice(0, 5)
-    }
-  },{
-    name: 'Песто',
-    imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60177073018C580C07B2F34917.avif',
-    categoryId: 1,
-    ingredients: {
-      connect: _ingredients.slice(0, 5)
-    }
-  },{
-    name: 'Карбонара',
-    imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D60160C1A26A8F6AB3C6F501345.avif',
-    categoryId: 1,
-    ingredients: {
-      connect: _ingredients.slice(0, 5)
-    }
-  },
-]

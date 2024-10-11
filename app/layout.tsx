@@ -11,7 +11,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-    title: 'Next Pizza',
+    title: 'Test App',
     description: 'This is next pizza test app'
 }
 

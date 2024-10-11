@@ -22,17 +22,24 @@ export async function GET(req: NextRequest) {
 
     if (filters) {
       const where = {}
+
+      const {price, ingredients, size, pizzaType} = filters;
+
+      if (price.length) {
+
+      }
+
       const filtersProducts: PopulatedProduct[] = await prisma.product
           .findMany({
             where,
-            include: { category: true }
+            include: { category: true, items: true, ingredients: true }
           });
 
       return NextResponse.json(getSortedProducts(filtersProducts))
     }
 
-    const allProducts: PopulatedProduct[] = await prisma.product.findMany({ include: { category: true } });
-
+    const allProducts: PopulatedProduct[] = await prisma.product.findMany({ include: { category: true, items: true, ingredients: true } });
+    console.log(allProducts);
     return NextResponse.json(getSortedProducts(allProducts))
   } catch (err) {
     console.error(err);
