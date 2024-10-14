@@ -1,12 +1,12 @@
 import {create} from "zustand";
 import {Product} from "@prisma/client";
-import {SortedByCategoryProducts} from "@/types";
+import {ProductWithRelations, SortedByCategoryProducts} from "@/types";
 
 interface State {
   searchProducts: Product[];
   setSearchProducts: (products: Product[]) => void;
-  oneProductInfo: Product | null;
-  setOneProductInfo: (product: Product | null) => void;
+  oneProductInfo: ProductWithRelations | null;
+  setOneProductInfo: (product: ProductWithRelations | null) => void;
   products: SortedByCategoryProducts[];
   setProducts: (list: SortedByCategoryProducts[]) => void;
   loading: boolean;
@@ -16,7 +16,7 @@ interface State {
 export const useProductsStore = create<State>()((set) => ({
   searchProducts: [],
   oneProductInfo: null,
-  setOneProductInfo: ((oneProductInfo: Product | null)=> set({ oneProductInfo })),
+  setOneProductInfo: ((oneProductInfo: ProductWithRelations | null)=> set({ oneProductInfo })),
   setSearchProducts: ((searchProducts: Product[]) => set({ searchProducts })),
   products: [],
   setProducts: (list: SortedByCategoryProducts[]) => set({products: list}),

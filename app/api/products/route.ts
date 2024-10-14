@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
     if (filters) {
       const where = {}
 
-      const {price, ingredients, size, pizzaType} = filters;
+      const {price} = filters;
 
       if (price.length) {
 

@@ -1,6 +1,6 @@
 import {axiosInstance} from "@/shared/services/axios-instance";
 import {ApiRoutes} from "@/shared/services/apiRoutes";
-import {ProductFilters, SearchProducts, SortedByCategoryProducts} from "@/types";
+import {ProductFilters, ProductWithRelations, SearchProducts, SortedByCategoryProducts} from "@/types";
 import {Product} from "@prisma/client";
 
 export const searchProducts = async (query: string): Promise<SearchProducts> => {
@@ -13,6 +13,6 @@ export const getProducts = async (filters: ProductFilters | null): Promise<Sorte
       .data;
 }
 
-export const getOneProductInfo = async (id: string): Promise<Product | null> => {
-  return (await axiosInstance.get<Product | null>(`/products/${id}`)).data
+export const getOneProductInfo = async (id: string): Promise<ProductWithRelations | null> => {
+  return (await axiosInstance.get<ProductWithRelations | null>(`/products/${id}`)).data
 }
