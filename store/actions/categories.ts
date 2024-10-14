@@ -1,5 +1,5 @@
-import {axiosInstance} from "@/services/axios-instance";
-import {ApiRoutes} from "@/services/apiRoutes";
+import {axiosInstance} from "@/shared/services/axios-instance";
+import {ApiRoutes} from "@/shared/services/apiRoutes";
 import {Category} from "@prisma/client";
 
 export const getAllCategories = async (): Promise<Category[]> => {

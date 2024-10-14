@@ -1,13 +1,13 @@
 model Product {
   id       Int    @id @default(autoincrement())
-  name     String
-  imageUrl String
+  name     String @db.VarChar(255)
+  imageUrl String @db.VarChar(255)
 
   category   Category @relation(fields: [categoryId], references: [id])
   categoryId Int
 
   ingredients Ingredient[]
-  items ProductItem[]
+  items       ProductItem[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

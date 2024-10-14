@@ -1,6 +1,6 @@
 import '../globals.css';
 import {Metadata} from "next";
-import {Header} from "@/components/shared/Header";
+import {Header} from "@/shared/components/shared/UiComponents/Header";
 
 export const metadata: Metadata = {
     title: 'Next.js Application',

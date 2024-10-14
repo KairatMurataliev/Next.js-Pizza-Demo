@@ -1,14 +1,14 @@
 model User {
   id Int @id @default(autoincrement())
 
-  fullName String
-  email    String   @unique
-  password String
+  fullName String   @db.VarChar(255)
+  email    String   @unique @db.VarChar(255)
+  password String   @db.VarChar(255)
   role     UserRole @default(USER)
   verified DateTime
 
-  provider   String?
-  providerId String?
+  provider   String? @db.VarChar(255)
+  providerId String? @db.VarChar(255)
 
   cart             Cart?
   orders           Order[]

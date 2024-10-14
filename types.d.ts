@@ -1,4 +1,5 @@
-import {Product, ProductItem} from "@prisma/client";
+import {Ingredient, Product, ProductItem} from "@prisma/client";
+import {mapPizzaType, mapSize} from "@/shared/constants/pizza";
 
 export type SearchProducts = {
   products: Product[]
@@ -28,3 +29,8 @@ export type Variant = {
   value: string;
   disabled?: boolean
 }
+
+export type ProductWithRelations = Product & { items: ProductItem[]; ingredients: Ingredient[] }
+
+export type PizzaSize = keyof typeof mapSize;
+export type PizzaType = keyof typeof mapPizzaType;

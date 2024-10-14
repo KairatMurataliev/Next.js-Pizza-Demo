@@ -6,7 +6,7 @@ model Cart {
 
   items CartItem[]
 
-  token String
+  token String @db.VarChar(255)
 
   totalAmount Int @default(0)
 

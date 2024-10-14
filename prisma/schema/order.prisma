@@ -2,16 +2,16 @@ model Order {
   id          Int         @id @default(autoincrement())
   user        User?       @relation(fields: [userId], references: [id])
   userId      Int?
-  token       String
+  token       String      @db.VarChar(255)
   totalAmount Int
   status      OrderStatus
-  paymentId   String?
+  paymentId   String?     @db.VarChar(255)
   items       Json
 
-  fullName String
-  address  String
-  phone    String
-  comment  String?
+  fullName     String    @db.VarChar(255)
+  address      String    @db.VarChar(255)
+  phone        String    @db.VarChar(255)
+  comment      String?   @db.VarChar(255)
   deliveryTime DateTime?
 
   createdAt DateTime @default(now())

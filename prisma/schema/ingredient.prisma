@@ -1,9 +1,9 @@
 model Ingredient {
   id Int @id @default(autoincrement())
 
-  name     String
+  name     String @db.VarChar(255)
   price    Int
-  imageUrl String
+  imageUrl String @db.VarChar(255)
 
   products  Product[]
   cartItems CartItem[]

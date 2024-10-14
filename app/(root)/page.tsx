@@ -1,11 +1,11 @@
 'use client'
 
-import {Container, Filters, Title, ProductsGroupList} from "@/components/shared";
-import {TopBar} from "@/components/shared/TopBar";
-import {useProducts} from "@/hooks /useProducts";
+import {Container, Filters, Title, ProductsGroupList} from "@/shared/components/shared";
+import {TopBar} from "@/shared/components/shared/UiComponents/TopBar";
+import {useProducts} from "@/shared/hooks /useProducts";
 import {useProductsStore} from "@/store/reducers/products";
 import {useCategoriesStore} from "@/store/reducers/category";
-import {useCategories} from "@/hooks /useCategories";
+import {useCategories} from "@/shared/hooks /useCategories";
 
 export default function Home() {
   const sortedList = useProductsStore(state => state.products);

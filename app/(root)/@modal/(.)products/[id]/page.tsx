@@ -1,8 +1,8 @@
 'use client'
 
 import {useProductsStore} from "@/store/reducers/products";
-import {useProducts} from "@/hooks /useProducts";
-import {ChooseProductModal} from "@/components/shared";
+import {useProducts} from "@/shared/hooks /useProducts";
+import {ChooseProductModal} from "@/shared/components/shared";
 
 export default function ProductModalPage({params: {id}}: { params: { id: string } }) {
   const productInfo = useProductsStore(state => state.oneProductInfo)
