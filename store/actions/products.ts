@@ -1,7 +1,6 @@
 import {axiosInstance} from "@/shared/services/axios-instance";
 import {ApiRoutes} from "@/shared/services/apiRoutes";
 import {ProductFilters, ProductWithRelations, SearchProducts, SortedByCategoryProducts} from "@/types";
-import {Product} from "@prisma/client";
 
 export const searchProducts = async (query: string): Promise<SearchProducts> => {
   return (await axiosInstance.get<SearchProducts>(ApiRoutes.SEARCH_PRODUCT, { params: { query } }))
