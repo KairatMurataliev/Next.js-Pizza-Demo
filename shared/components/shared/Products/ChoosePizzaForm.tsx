@@ -1,15 +1,13 @@
 'use client';
 
 import React, {useEffect, useState} from 'react';
+import {useSet} from "react-use";
 import {Ingredient, ProductItem} from "@prisma/client";
-import {cn} from "@/shared/lib/utils";
+import {calTotalPizzaPrice, cn, getAvailablePizzaSizes} from "@/shared/lib/utils";
 import {ProductVariants, PizzaImage, Title, IngredientComponent} from "@/shared/components/shared";
 import {Button} from "@/shared/components/ui";
 import {mapPizzaType, pizzaTypes} from "@/shared/constants/pizza";
 import {PizzaSize, PizzaType} from "@/types";
-import {useSet} from "react-use";
-import {calTotalPizzaPrice} from "@/shared/lib/calc-pizza-total-price";
-import {getAvailablePizzaSizes} from "@/shared/lib";
 
 interface Props {
   className?: string;

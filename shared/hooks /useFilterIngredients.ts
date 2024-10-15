@@ -1,26 +1,14 @@
 import {useEffect} from "react";
-import {Api} from "@/shared/services/api-client";
 import {useIngredientsStore} from "@/store/reducers/ingredients";
 
 export const useFilterIngredients = () => {
-  const setIngredients = useIngredientsStore(state => state.setIngredients)
-  const setLoading = useIngredientsStore(state => state.setLoading)
+  const getIngredientsForFilters = useIngredientsStore(state => state.getIngredientsForFilters)
 
   useEffect(() => {
-    async function fetchIngredients() {
-      try {
-        setLoading(true)
-        const response = await Api.ingredients.getAllIngredients();
-        setIngredients(response);
-        setLoading(false)
-      } catch (err) {
-        console.error(err);
-        setLoading(false)
-      } finally {
-        setLoading(false)
-      }
+    const fetchIngredientsData = async () => {
+      await getIngredientsForFilters();
     }
 
-    fetchIngredients()
-  }, [setIngredients, setLoading]);
+    void fetchIngredientsData();
+  }, [getIngredientsForFilters]);
 }

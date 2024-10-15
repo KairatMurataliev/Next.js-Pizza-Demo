@@ -40,3 +40,13 @@ export {
 } from './select'
 export {Skeleton} from './skeleton'
 export {Slider} from './slider'
+export {Sheet,
+    SheetPortal,
+    SheetOverlay,
+    SheetTrigger,
+    SheetClose,
+    SheetContent,
+    SheetHeader,
+    SheetFooter,
+    SheetTitle,
+    SheetDescription,} from './sheet'

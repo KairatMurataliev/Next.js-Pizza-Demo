@@ -3,6 +3,6 @@ import {ApiRoutes} from "@/shared/services/apiRoutes";
 import {Ingredient} from "@prisma/client";
 
 export const getAllIngredients = async (): Promise<Ingredient[]> => {
-  return (await axiosInstance.get<Ingredient[]>(ApiRoutes.INGREDIENTS))
+  return (await axiosInstance.get<Ingredient[]>('ingredients'))
       .data;
 }

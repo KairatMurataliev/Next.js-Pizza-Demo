@@ -1,26 +1,13 @@
 import {useEffect} from "react";
-import {Api} from "@/shared/services/api-client";
 import {useCategoriesStore} from "@/store/reducers/category";
 
 export const useCategories = () => {
-  const setCategories = useCategoriesStore(state => state.setCategories)
-  const setLoading = useCategoriesStore(state => state.setLoading)
+  const getCategories = useCategoriesStore(state => state.getCategories)
 
   useEffect(() => {
-    async function getCategories() {
-      try {
-        setLoading(true)
-        const response = await Api.categories.getAllCategories();
-        setCategories(response);
-        setLoading(false)
-      } catch (err) {
-        console.error(err);
-        setLoading(false)
-      } finally {
-        setLoading(false)
-      }
+    const fetchCategories = async () => {
+      await getCategories();
     }
-
-    getCategories()
-  }, [setCategories, setLoading]);
+    void fetchCategories();
+  }, [getCategories]);
 }

@@ -34,3 +34,14 @@ export type ProductWithRelations = Product & { items: ProductItem[]; ingredients
 
 export type PizzaSize = keyof typeof mapSize;
 export type PizzaType = keyof typeof mapPizzaType;
+
+export type CartStateItem = {
+  id: number;
+  quantity: number;
+  name: string;
+  imageUrl: string;
+  price: number;
+  pizzaSize?: number | null;
+  pizzaType?: number | null;
+  ingredients?: Array<{name: string, price: string}>
+}
